@@ -9,8 +9,13 @@
                         @csrf
                         <div class="panel panel-body login-form">
                             <div class="text-center">
-                                <div class="icon-object border-slate-300 text-slate-300"><i class="icon-enter"></i></div>
-                                <h3 class="content-group">Bienvenue<small class="display-block">Entrez vos identifiants pour vous connecter</small></h3>
+                                <div id="logo" class="p-b-30 padding-20">
+                                    <img class="img-fluid" src="{{ asset('images/django.png') }}" title="Django">
+                                </div>
+
+                                <div class="p-b-20">
+                                    <small class="display-block">Entrez vos identifiants pour vous connecter</small>
+                                </div>
                             </div>
 
                             <div class="form-group has-feedback has-feedback-left">
@@ -41,28 +46,20 @@
                             </div>
 
                             <div class="form-group login-options">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <label class="checkbox-inline">
-                                            <input type="checkbox" name="remember" class="styled" {{ old('remember') ? 'checked' : '' }}>
-                                            Remember
-                                        </label>
-                                    </div>
-
-                                    <div class="col-sm-6 text-right">
-                                        <a href="{{ route('password.request') }}">Mot de passe oublié ?</a>
-                                    </div>
-                                </div>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="remember" class="styled" {{ old('remember') ? 'checked' : '' }}>
+                                    Se souvenir de moi
+                                </label>
                             </div>
 
                             <div class="form-group">
                                 <button type="submit" class="btn bg-primary-400 btn-block">Connexion <i class="icon-arrow-right14 position-right"></i></button>
                             </div>
+                            <div class="text-center">
+                                <small class="text-grey-300">&copy; 2018. <a href="#">Django App</a> by Romain Sola</small>
+                            </div>
                         </div>
                     </form>
-                    <div class="footer text-muted text-center">
-                        &copy; 2018. <a href="#">Django App</a> by Romain Sola
-                    </div>
                 </div>
             </div>
         </div>
